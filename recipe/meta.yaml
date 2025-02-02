@@ -1,5 +1,5 @@
 {% set name = "wordllama" %}
-{% set version = "0.3.8" %}
+{% set version = "0.3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/dleemiller/WordLlama/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 18f61dfa0c9e9e2874844e9de126f7827e238400746279fd9f04b2864a84bada
+  sha256: 8afd5d41ece3c401486fb5cc2b7fd952e5886744555a76d7257dce52537ef38d
 
 build:
   skip: true  # [py<38]
