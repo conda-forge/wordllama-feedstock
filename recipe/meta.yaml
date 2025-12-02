@@ -1,5 +1,5 @@
 {% set name = "wordllama" %}
-{% set version = "0.3.9" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/dleemiller/WordLlama/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 8afd5d41ece3c401486fb5cc2b7fd952e5886744555a76d7257dce52537ef38d
+  sha256: 3837b51d60dc511f91e0e918bc2bff190ea38051549d1c9772dac1a537f81943
 
 build:
   skip: true  # [py<38]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
 
