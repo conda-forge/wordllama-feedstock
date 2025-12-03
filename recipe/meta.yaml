@@ -10,7 +10,6 @@ source:
   sha256: 3837b51d60dc511f91e0e918bc2bff190ea38051549d1c9772dac1a537f81943
 
 build:
-  skip: true  # [py<38]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
   script_env:
@@ -26,10 +25,12 @@ requirements:
     - setuptools
     - setuptools_scm
     - cython
-    - numpy
+    - numpy >=2
+    - tomli >=1
+    - wheel
   run:
     - python
-    - numpy
+    - numpy >=2
     - safetensors
     - tokenizers
     - toml
